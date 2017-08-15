@@ -57,7 +57,7 @@
       apiv1.getWeather(reqMock, resMock);
 
       assert(resMock.status.lastCall.calledWith(400), 'Unexpected response:' + resMock.status.lastCall.args);
-      assert(resMock.send.lastCall.calledWith('Failed to get the data'), 'Unexpected response:' + resMock.send.lastCall.args);
+      assert(false, 'Unexpected response:' + resMock.send.lastCall.args);
     });
 
     it('with incomplete zip code', function() {
